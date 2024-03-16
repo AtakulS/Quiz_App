@@ -25,7 +25,7 @@ class AnswerCard extends StatelessWidget {
         vertical: 10.0,
       ),
       child: selectedAnswerIndex != null
-          // if one option is chosen
+          
           ? Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
@@ -46,7 +46,7 @@ class AnswerCard extends StatelessWidget {
                 ),
               ),
             )
-          // If no option is selected
+          
           : Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(

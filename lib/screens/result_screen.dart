@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_deneme/screens/quiz_screen.dart'; // Varsayılan olarak quiz ekranının adı "QuizScreen" olarak kabul edilmiştir
+import 'package:quiz_deneme/screens/quiz_screen.dart'; 
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({

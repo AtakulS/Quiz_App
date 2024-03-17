@@ -26,8 +26,19 @@ class ResultScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text(
+              'Quiz Bitti',
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
             Text(
-              'Quiz Bitti Doğru Cevap:  $score',
+              'Doğru Cevap:  $score',
               style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -38,7 +49,7 @@ class ResultScreen extends StatelessWidget {
               height: 10,
             ),
             Text(
-              'Yanlış Cevap Sayısı: $wrongAnswer',
+              'Yanlış Cevap : $wrongAnswer',
               style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

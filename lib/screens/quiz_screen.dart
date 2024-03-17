@@ -71,8 +71,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 );
               },
             ),
-            // Next Button
-            isLastQuestion
+            isLastQuestion && selectedAnswerIndex != null
                 ? RectangularButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(

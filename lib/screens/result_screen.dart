@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_deneme/screens/quiz_screen.dart'; 
+import 'package:quiz_deneme/screens/quiz_screen.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({
     super.key,
     required this.score,
+    required this.wrongAnswer,
   });
 
   final int score;
+  final int wrongAnswer;
 
   void goToFirstQuestion(BuildContext context) {
     Navigator.of(context).pushReplacement(
@@ -26,6 +28,17 @@ class ResultScreen extends StatelessWidget {
           children: [
             Text(
               'Quiz Bitti Doğru Cevap:  $score',
+              style: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              'Yanlış Cevap Sayısı: $wrongAnswer',
               style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

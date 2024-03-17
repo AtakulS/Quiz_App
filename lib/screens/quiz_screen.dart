@@ -15,12 +15,15 @@ class _QuizScreenState extends State<QuizScreen> {
   int? selectedAnswerIndex;
   int questionIndex = 0;
   int score = 0;
+  int wrongAnswer = 0;
 
   void pickAnswer(int value) {
     selectedAnswerIndex = value;
     final question = questions[questionIndex];
     if (selectedAnswerIndex == question.correctAnswerIndex) {
       score++;
+    } else {
+      wrongAnswer++;
     }
     setState(() {});
   }
@@ -78,6 +81,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         MaterialPageRoute(
                           builder: (_) => ResultScreen(
                             score: score,
+                            wrongAnswer: wrongAnswer,
                           ),
                         ),
                       );

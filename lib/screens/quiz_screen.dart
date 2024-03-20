@@ -31,13 +31,9 @@ class _QuizScreenState extends State<QuizScreen> {
   void goToNextQuestion() {
     if (questionIndex < questions.length - 1) {
       questionIndex++;
+      selectedAnswerIndex = null;
+      setState(() {});
     }
-  }
-
-  @override
-  void initState() {
-    selectedAnswerIndex == null;
-    super.initState();
   }
 
   @override
@@ -96,10 +92,14 @@ class _QuizScreenState extends State<QuizScreen> {
                     label: 'Bitti',
                   )
                 : RectangularButton(
-                    onPressed: () {
-                      pickAnswer(selectedAnswerIndex!);
-                      selectedAnswerIndex != null ? goToNextQuestion() : null;
-                    },
+                    onPressed: selectedAnswerIndex != null
+                        ? () {
+                            pickAnswer(selectedAnswerIndex!);
+                            selectedAnswerIndex != null
+                                ? goToNextQuestion()
+                                : null;
+                          }
+                        : null,
                     label: 'Sonraki Soru',
                   ),
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_deneme/screens/open_screen.dart';
 
 import '/screens/quiz_screen.dart';
 
@@ -13,7 +14,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: QuizScreen(),
+      home: StartQuiz(),
     );
   }
 }

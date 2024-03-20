@@ -86,12 +86,12 @@ class _QuizScreenState extends State<QuizScreen> {
                         ),
                       );
                     },
-                    label: 'Finish',
+                    label: 'Bitti',
                   )
                 : RectangularButton(
                     onPressed:
                         selectedAnswerIndex != null ? goToNextQuestion : null,
-                    label: 'Next',
+                    label: 'Sonraki Soru',
                   ),
           ],
         ),

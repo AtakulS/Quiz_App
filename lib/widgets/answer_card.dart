@@ -25,7 +25,6 @@ class AnswerCard extends StatelessWidget {
         vertical: 10.0,
       ),
       child: selectedAnswerIndex != null
-          
           ? Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
@@ -46,7 +45,6 @@ class AnswerCard extends StatelessWidget {
                 ),
               ),
             )
-          
           : Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(

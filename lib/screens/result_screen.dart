@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_deneme/screens/open_screen.dart';
 import 'package:quiz_deneme/screens/quiz_screen.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class ResultScreen extends StatelessWidget {
   void goToFirstQuestion(BuildContext context) {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (_) => const QuizScreen(), // Quiz ekranına geri dön
+        builder: (_) => const StartQuiz(), // Quiz ekranına geri dön
       ),
     );
   }
@@ -42,7 +43,7 @@ class ResultScreen extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.red,
+                color: Colors.green,
               ),
             ),
             const SizedBox(

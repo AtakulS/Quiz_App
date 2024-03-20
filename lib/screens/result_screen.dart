@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_deneme/screens/open_screen.dart';
-import 'package:quiz_deneme/screens/quiz_screen.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({

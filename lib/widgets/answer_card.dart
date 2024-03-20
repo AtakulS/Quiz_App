@@ -5,21 +5,16 @@ class AnswerCard extends StatelessWidget {
     super.key,
     required this.question,
     required this.isSelected,
-    required this.currentIndex,
-    required this.correctAnswerIndex,
     required this.selectedAnswerIndex,
   });
 
   final String question;
   final bool isSelected;
-  final int? correctAnswerIndex;
+
   final int? selectedAnswerIndex;
-  final int currentIndex;
 
   @override
   Widget build(BuildContext context) {
-    bool isCorrectAnswer = currentIndex == correctAnswerIndex;
-    bool isWrongAnswer = !isCorrectAnswer && isSelected;
     return Padding(
       padding: const EdgeInsets.symmetric(
         vertical: 10.0,
@@ -31,11 +26,7 @@ class AnswerCard extends StatelessWidget {
                 color: Colors.white10,
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                  color: isCorrectAnswer
-                      ? Colors.green
-                      : isWrongAnswer
-                          ? Colors.red
-                          : Colors.white24,
+                  color: isSelected ? Colors.green : Colors.white24,
                 ),
               ),
               child: Text(

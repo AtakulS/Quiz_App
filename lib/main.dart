@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_deneme/screens/open_screen.dart';
 
-import '/screens/quiz_screen.dart';
-
 void main() {
   runApp(const MainApp());
 }
